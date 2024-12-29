@@ -2,8 +2,8 @@
 
 
 
-PERSON1=Ramesh
-PERSON2=Suresh
+PERSON1=Mounika
+PERSON2=Sai
 echo "$PERSON1:: hello $PERSON2.How are you?"
 echo "$PERSON2:: hello $PERSON1.I am fine.How are you?"
 echo  "$PERSON1:: I am fine too.How is your work?"
