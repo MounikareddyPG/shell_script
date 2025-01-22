@@ -19,5 +19,12 @@ fi
 for i in $@
 do 
 echo "install package : $i"
-dnf list installed  $i
+dnf list installed  $i 7>>$LOGFILE
+   if [&? -eq 0]
+     then 
+   echo "&i already installed...SKIPPING"
+   else
+     echo "&i not installed..Need to install"
+
+     fi
 done 
