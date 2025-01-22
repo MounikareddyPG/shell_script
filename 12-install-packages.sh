@@ -24,7 +24,7 @@ do
     then 
         echo "$i already installed...SKIPPING"
     else
-        echo "$i not installed..Need to install"
-
+       dnf install package $i -y &>>$LOGFILE
+       VALIDATE $? "installtion of $i"
     fi
 done 
