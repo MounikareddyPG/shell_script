@@ -10,4 +10,12 @@ else
    echo "you are super user"
 fi
 
-echo "all packages:$@"
+#echo "all packages:$@"
+
+for i in $@
+do 
+echo "install package : $i"
+done
+
+mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
+VALIDATE $? "setting up root password" 
