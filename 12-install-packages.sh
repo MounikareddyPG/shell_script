@@ -19,7 +19,7 @@ fi
 for i in $@
 do 
 echo "install package : $i"
-dnf list installed  $i 7>>$LOGFILE
+dnf list installed  $i &>>$LOGFILE
    if [&? -eq 0]
      then 
    echo "&i already installed...SKIPPING"
