@@ -18,13 +18,13 @@ fi
 
 for i in $@
 do 
-echo "install package : $i"
-dnf list installed  $i &>>$LOGFILE
+   echo "install package : $i"
+   dnf list installed  $i &>>$LOGFILE
    if [ $? -eq 0 ]
-     then 
-   echo "$i already installed...SKIPPING"
-   else
-     echo "$i not installed..Need to install"
+    then 
+        echo "$i already installed...SKIPPING"
+    else
+        echo "$i not installed..Need to install"
 
-     fi
+    fi
 done 
